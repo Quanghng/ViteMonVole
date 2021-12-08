@@ -1,0 +1,102 @@
+h1, h2, h3, h4, h5, h6 { color: #000000; font-weight: normal; }
+h1 { font-size: 36px; margin: 0 0 30px; padding: 5px 0 }
+h2 { font-size: 24px; margin: 0 0 25px; padding: 5px 0 }
+h3 { font-size: 20px; margin: 0 0 20px; padding: 0; }
+h4 { font-size: 16px; margin: 0 0 15px; padding: 0; }
+h5 { font-size: 14px; margin: 0 0 10px; padding: 0;  }
+h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
+
+.cleaner { clear: both }
+.h10 { height: 10px }
+.h20 { height: 20px }
+.h30 { height: 30px }
+.h40 { height: 40px }
+.h50 { height: 50px }
+
+
+.float_l { float: left }
+.float_r { float: right }
+
+.col_12 { width: 450px }
+.small-pp{font-size: 10px;}
+.smaller{width: 300px}
+.big-pp{font-size: 35px;}
+
+
+.gradient-border {
+	--borderWidth: 3px;
+	background:salmon;
+	position: relative;
+	border-radius: var(--borderWidth);
+  }
+.gradient-border:after {
+	content: '';
+	position: absolute;
+	top: calc(-1 * var(--borderWidth));
+	left: calc(-1 * var(--borderWidth));
+	height: calc(100% + var(--borderWidth) * 2);
+	width: calc(100% + var(--borderWidth) * 2);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 3s ease alternate infinite;
+	background-size: 300% 300%;
+}
+  
+  
+@keyframes animatedgradient {
+	0% {
+	    background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.flipX{
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+}
+.flipY{
+    transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+}
+.flip{
+    transform: scale(-1, -1);
+    -moz-transform: scale(-1, -1);
+}
+
+.rotup{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.rotdown{
+	-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.rot180{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.trans{
+	transform:rotateZ(90) scale(-1, -1);
+}
+
+#flag{
+	margin-top: 10vh;
+}
